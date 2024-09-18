@@ -26,7 +26,7 @@ class TemplateController{
 
 		}else{
 
-			return "http://marketplace.com/";
+			return "http://proyectoumg.com/";
 		}
 
 	}
@@ -148,7 +148,7 @@ class TemplateController{
 
 	static public function sendEmail($name, $subject, $email, $message, $url){
 
-		date_default_timezone_set("America/Bogota");
+		date_default_timezone_set("America/Guatemala");
 
 		$mail = new PHPMailer;
 

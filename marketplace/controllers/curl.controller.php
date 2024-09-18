@@ -8,7 +8,7 @@ class CurlController{
 
 	static public function api(){
 
-		return "http://api.marketplace.com/";
+		return "http://apiumg.proyectoumg.com/";
 	}
 
 

@@ -10,7 +10,7 @@ class Connection{
 
 		try{
 
-			$link = new PDO("mysql:host=localhost;dbname=marketplace","root", "");
+			$link = new PDO("mysql:host=localhost;dbname=proyectoumg","root", "");
 
 			$link->exec("set names utf8");
 

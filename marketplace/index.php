@@ -6,7 +6,7 @@ Mostrar errores
 
 ini_set('display_errors', 1);
 ini_set("log_errors", 1);
-ini_set("error_log",  "D:/xampp/htdocs/sistema-php/marketplace/php_error_log");
+ini_set("error_log",  "C:/xampp/htdocs/proyecto_calidad_software/proyecto_calidad_software/marketplace/php_error_log");
 
 header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
