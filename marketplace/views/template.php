@@ -488,7 +488,7 @@ if(!empty($urlParams[0])){
 
     <!-- PayPal -->
     <!-- https://developer.paypal.com/docs/checkout/ -->
-    <script src="https://www.paypal.com/sdk/js?client-id=[YOUR API KEY]"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZuB9tYabVGIO__lhEu7A-le2_SFo-sxP-3MBX6ap1iaF0Kr0SLrLjju5DBPLZlpGoIhthfyo72s4TL2"></script>
 
     
     <!-- Mercado Pago -->
