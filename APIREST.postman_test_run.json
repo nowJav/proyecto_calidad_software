@@ -1,0 +1,292 @@
+{
+	"id": "52d365df-ceba-40d5-897e-3cd4c2693453",
+	"name": "APIREST",
+	"timestamp": "2024-10-26T02:54:33.964Z",
+	"collection_id": "25153183-d574cd99-604d-44a1-81ca-c6fde1133f95",
+	"folder_id": 0,
+	"environment_id": "25153183-7fa1bd6f-625f-4cd0-9d9a-605d14e005f9",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-10-26T02:54:27.724Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4451e685-8005-4d41-941f-e621531b50ed",
+			"name": "GET - Seleccionar dato específico",
+			"url": "api.marketplace.com/categories?select=id_category,name_category,url_category,date_created_category,date_updated_category",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12,
+				13,
+				13,
+				12,
+				11
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "372a828d-6a7e-4c67-bbfd-b9a92f933859",
+			"name": "GET - Ordenar datos",
+			"url": "api.marketplace.com/products?select=url_product&orderBy=url_product&orderMode=ASC",
+			"time": 60,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				37,
+				43,
+				82,
+				35,
+				60
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "bfa227f3-1648-42d8-bcc3-62189c3d45d7",
+			"name": "GET - Búsqueda sin relaciones y con filtros",
+			"url": "api.marketplace.com/products?select=*&linkTo=name_product,id_category_product",
+			"time": 124,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				106,
+				171,
+				127,
+				123,
+				124
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "6f18e1d1-96ae-4731-b1f9-f8f8d897fbcf",
+			"name": "GET - Búsqueda con relaciones y con filtros",
+			"url": "api.marketplace.com/relations?rel=products,categories&type=product,category&select=name_product,name_category&linkTo=name_product,id_category_product&search=Sound,3",
+			"time": 21,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21,
+				127,
+				31,
+				21,
+				21
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "84fc4087-9bab-4417-894a-fc40bb17326a",
+			"name": "GET - Búsqueda con relaciones y con filtros Copy",
+			"url": "api.marketplace.com/relations?rel=products,categories&type=product,category&select=name_product,name_category&linkTo=name_product,id_category_product&search=Sound,3",
+			"time": 20,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				34,
+				49,
+				113,
+				20,
+				20
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "1bc18963-97c3-48e6-9f80-40084acc24a3",
+			"name": "GET - Rangos con filtros",
+			"url": "api.marketplace.com/products?linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&select=*&filterTo=id_category_product",
+			"time": 123,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				119,
+				145,
+				157,
+				134,
+				123
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "1aa90753-cd6b-430b-b7d2-d7ea0b86d097",
+			"name": "GET - Rangos entre relaciones con filtros",
+			"url": "api.marketplace.com/relations?rel=products,categories&type=product,category&linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&select=name_product,name_category,date_created_product&filterTo=id_category_product&inTo=1",
+			"time": 15,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				115,
+				15,
+				98,
+				18,
+				15
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "5a5be8b7-394b-4083-9fbd-80c527e80537",
+			"name": "Registro de usuario",
+			"url": "api.marketplace.com/users?register=true&suffix=user",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				193,
+				95,
+				81,
+				684,
+				147
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "2d586cbb-e433-4091-98c4-168a2d524b6c",
+			"name": "Login de usuario",
+			"url": "api.marketplace.com/users?login=true&suffix=user",
+			"time": 144,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				59,
+				60,
+				115,
+				139,
+				144
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 4082,
+	"collection": {
+		"requests": [
+			{
+				"id": "4451e685-8005-4d41-941f-e621531b50ed",
+				"method": "GET"
+			},
+			{
+				"id": "372a828d-6a7e-4c67-bbfd-b9a92f933859",
+				"method": "GET"
+			},
+			{
+				"id": "bfa227f3-1648-42d8-bcc3-62189c3d45d7",
+				"method": "GET"
+			},
+			{
+				"id": "6f18e1d1-96ae-4731-b1f9-f8f8d897fbcf",
+				"method": "GET"
+			},
+			{
+				"id": "84fc4087-9bab-4417-894a-fc40bb17326a",
+				"method": "GET"
+			},
+			{
+				"id": "1bc18963-97c3-48e6-9f80-40084acc24a3",
+				"method": "GET"
+			},
+			{
+				"id": "1aa90753-cd6b-430b-b7d2-d7ea0b86d097",
+				"method": "GET"
+			},
+			{
+				"id": "5a5be8b7-394b-4083-9fbd-80c527e80537",
+				"method": "POST"
+			},
+			{
+				"id": "2d586cbb-e433-4091-98c4-168a2d524b6c",
+				"method": "POST"
+			}
+		]
+	}
+}
