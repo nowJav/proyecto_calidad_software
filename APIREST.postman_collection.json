@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "d574cd99-604d-44a1-81ca-c6fde1133f95",
+		"name": "APIREST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25153183"
+	},
+	"item": [
+		{
+			"name": "GET - Seleccionar dato específico",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/categories?select=id_category,name_category,url_category,date_created_category,date_updated_category",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"categories"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "id_category,name_category,url_category,date_created_category,date_updated_category"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Ordenar datos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/products?select=url_product&orderBy=url_product&orderMode=ASC",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "url_product"
+						},
+						{
+							"key": "orderBy",
+							"value": "url_product"
+						},
+						{
+							"key": "orderMode",
+							"value": "ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Búsqueda sin relaciones y con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/products?select=*&linkTo=name_product,id_category_product",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_product"
+						},
+						{
+							"key": "search",
+							"value": "sound,3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Búsqueda con relaciones y con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/relations?rel=products,categories&type=product,category&select=name_product,name_category&linkTo=name_product,id_category_product&search=Sound,3",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_product"
+						},
+						{
+							"key": "search",
+							"value": "Sound,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Búsqueda con relaciones y con filtros Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/relations?rel=products,categories&type=product,category&select=name_product,name_category&linkTo=name_product,id_category_product&search=Sound,3",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category"
+						},
+						{
+							"key": "linkTo",
+							"value": "name_product,id_category_product"
+						},
+						{
+							"key": "search",
+							"value": "Sound,3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/products?linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&select=*&filterTo=id_category_product",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "between1",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "between2",
+							"value": "2021-04-30"
+						},
+						{
+							"key": "select",
+							"value": "*"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "inTo",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Rangos entre relaciones con filtros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "api.marketplace.com/relations?rel=products,categories&type=product,category&linkTo=date_created_product&between1=2021-01-01&between2=2021-04-30&select=name_product,name_category,date_created_product&filterTo=id_category_product&inTo=1",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"relations"
+					],
+					"query": [
+						{
+							"key": "rel",
+							"value": "products,categories"
+						},
+						{
+							"key": "type",
+							"value": "product,category"
+						},
+						{
+							"key": "linkTo",
+							"value": "date_created_product"
+						},
+						{
+							"key": "between1",
+							"value": "2021-01-01"
+						},
+						{
+							"key": "between2",
+							"value": "2021-04-30"
+						},
+						{
+							"key": "select",
+							"value": "name_product,name_category,date_created_product"
+						},
+						{
+							"key": "filterTo",
+							"value": "id_category_product"
+						},
+						{
+							"key": "inTo",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_user",
+							"value": "guille@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password_user",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "api.marketplace.com/users?register=true&suffix=user",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "register",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login de usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c5LTA6WPbMwHhEabYu77nN9cn4VcMj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email_user",
+							"value": "guille@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password_user",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "api.marketplace.com/users?login=true&suffix=user",
+					"host": [
+						"api",
+						"marketplace",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "true"
+						},
+						{
+							"key": "suffix",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
