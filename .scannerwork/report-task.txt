@@ -1,0 +1,6 @@
+projectKey=proyecto_calidad_software_SQ
+serverUrl=http://localhost:9000
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:9000/dashboard?id=proyecto_calidad_software_SQ
+ceTaskId=a6f14942-399f-45e5-ba62-4108021f6fa0
+ceTaskUrl=http://localhost:9000/api/ce/task?id=a6f14942-399f-45e5-ba62-4108021f6fa0
